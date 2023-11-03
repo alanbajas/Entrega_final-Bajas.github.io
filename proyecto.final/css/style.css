@@ -1,0 +1,127 @@
+
+$colors: (
+primary: #007BFF,
+secondary: #e85d00,
+background: #fff,
+text: #001f,
+  // Agrega más colores si es necesario
+)
+
+
+$sizes: (
+small: 10px,
+medium: 20px,
+large: 30px,
+  // Agrega más tamaños si es necesario
+)
+
+body
+font-family: Arial, sans-serif
+margin: 0
+padding: 0
+// Barra de navegación
+.navbar
+display: flex
+justify-content: space-between
+align-items: center
+background-color: map-get($colors, primary)
+
+// Encabezado
+header
+color: map-get($colors, secondary)
+
+// Logotipo en la barra de navegación
+.navbar-brand img
+max-height: 10%
+
+// Enlaces en la navegación
+.navbar-nav a
+color: map-get($colors, text)
+text-decoration: none
+
+// Contenido principal
+.main-content
+padding: map-get($sizes, medium)
+
+// Tarjetas
+.card
+margin: map-get($sizes, small)
+padding: map-get($sizes, medium)
+border: 1px solid #ccc
+border-radius: 5px
+
+.card h3
+font-size: map-get($sizes, large)
+margin-top: map-get($sizes, medium)
+
+.card img
+max-width: 100%
+height: auto
+
+.card p
+margin: map-get($sizes, medium)
+
+// Botón dentro de las tarjetas
+.card button a
+color: map-get($colors, primary)
+text-decoration: none
+
+// Carrusel
+.carousel
+border: 2px solid map-get($colors, secondary)
+border-radius: map-get($sizes, large)
+
+// Indicadores del carrusel
+.carousel-indicators li
+background-color: map-get($colors, primary)
+border: 2px solid #fff
+border-radius: 50%
+width: 12px
+height: 12px
+
+// Controles del carrusel (círculos)
+.carousel-control-prev-circle, .carousel-control-next-circle
+background-color: #e09306
+border: 2px solid #fff
+border-radius: 50%
+width: 30px
+height: 30px
+line-height: 30px
+font-size: 18px
+color: #fff
+text-align: center
+
+// Imágenes en el carrusel
+.carousel-item img
+border: 1px solid #0a0909
+border-radius: 5px
+max-height: 300px
+
+// Controles de flecha
+.carousel-control-prev, .carousel-control-next
+background-color: transparent
+border: none
+
+// Leyenda del carrusel
+.carousel-caption
+background: rgba(0, 0, 0, 0.5)
+color: #fff
+border-radius: 5px
+text-align: left
+padding: 10px
+
+// Controles de carrusel (círculos y flechas) al pasar el mouse
+.carousel-control-prev:hover, .carousel-control-next:hover
+opacity: 1
+transition: opacity 0.9s
+
+// Icono en los controles de carrusel
+.custom-icon
+color: #fff
+font-size: 24px
+// Pie de página
+footer
+background-color: map-get($colors, secondary)
+color: map-get($colors, text)
+text-align: center
+padding: map-get($sizes, medium)
